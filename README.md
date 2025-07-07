@@ -28,33 +28,39 @@
 ---
 
 ## 🛠️ Project Structure
+
+---
+
+## 🛠️ Project Structure
+
+```bash
 uart_project/
 │
-├── uart/ # Top-level UART modules
-│ ├── uart_tx.v # Transmitter module
-│ ├── uart_rx.v # Receiver module
+├── uart/                        # Top-level UART modules
+│   ├── uart_tx.v                # UART Transmitter
+│   ├── uart_rx.v                # UART Receiver
 │
-│ ├── parity_calc.v # Parity calculator (TX)
-│ ├── serializer.v # Parallel to serial converter (TX)
-│ ├── tx_fsm.v # Finite State Machine for TX
-│ ├── mux.v # TX multiplexer for output selection
+│   ├── parity_calc.v            # Parity calculation logic
+│   ├── serializer.v             # Parallel to serial logic
+│   ├── tx_fsm.v                 # TX FSM for state control
+│   ├── mux.v                    # Multiplexer for TX data path
 │
-│ ├── data_sampling.v # RX sampling logic for noise handling
-│ ├── deserializer.v # Serial to parallel converter (RX)
-│ ├── edge_bit_counter.v # Timing control for sampling bits
-│ ├── rx_fsm.v # RX FSM to manage RX states
-│ ├── start_check.v # Detects the start bit
-│ ├── parity_check.v # Validates parity
-│ ├── stop_check.v # Checks stop bit validity
+│   ├── data_sampling.v          # RX sampling logic (for noise)
+│   ├── deserializer.v           # Serial to parallel logic
+│   ├── edge_bit_counter.v       # Timing control logic
+│   ├── rx_fsm.v                 # RX FSM for reception logic
+│   ├── start_check.v            # Start bit validation
+│   ├── parity_check.v           # Parity validation
+│   ├── stop_check.v             # Stop bit validation
 │
-├── sim_1/ # Testbenches
-│ ├── uart_tb.v # Full UART testbench (TX + RX)
-│ ├── uart_tx_tb.v # TX testbench
-│ ├── uart_rx_tb.v # RX testbench
+├── sim_1/                       # Testbenches
+│   ├── uart_tb.v                # Integrated testbench (TX + RX)
+│   ├── uart_tx_tb.v             # TX module testbench
+│   ├── uart_rx_tb.v             # RX module testbench
 │
 ├── constrs_1/
-│ └── zedboard_constraints.xdc # Xilinx ZedBoard I/O pin mapping
-
+│   └── zedboard_constraints.xdc # Xilinx ZedBoard pin mapping
+```
 ## ⚙️ Working Principle
 
 ### 📤 UART Transmitter (TX)
@@ -127,12 +133,6 @@ To synthesize and deploy this project on a Xilinx ZedBoard:
 This project is developed by **Chandrakiran G.**  
 📌 VLSI Design Enthusiast 
 📫 GitHub: [Kiran-VLSI](https://github.com/Kiran-VLSI)
-
----
-
-## 📝 License
-
-This project is licensed under the **MIT License** - you are free to use, modify, and distribute with attribution.
 
 ---
 
