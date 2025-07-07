@@ -2,7 +2,7 @@
 
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: Chandrakiran G (MSD fan and VLSI enthusiast)
+// Engineer: Chandrakiran G 
 // 
 // Create Date: 19.04.2025
 // Design Name: UART Module
